@@ -395,7 +395,7 @@ treeJSON = d3.json("result_final.json", function(error, treeData) {
             // d.y = (d.depth * 500); //500px per level.
         });
 
-        // Update the nodesÂ¡Â¦
+        // Update the nodes¡¦
         node = svgGroup.selectAll("g.node")
             .data(nodes, function(d) {
                 return d.id || (d.id = ++i);
@@ -489,7 +489,7 @@ treeJSON = d3.json("result_final.json", function(error, treeData) {
         nodeExit.select("text")
             .style("fill-opacity", 0);
 
-        // Update the linksÂ¡Â¦
+        // Update the links¡¦
         var link = svgGroup.selectAll("path.link")
             .data(links, function(d) {
                 return d.target.id;
