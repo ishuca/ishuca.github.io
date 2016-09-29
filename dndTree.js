@@ -27,7 +27,7 @@ EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.*/
 
 
 // Get JSON data
-treeJSON = d3.json("flare.json", function(error, treeData) {
+treeJSON = d3.json("test.json", function(error, treeData) {
 
     // Calculate total nodes, max label length
     var totalNodes = 0;
@@ -395,7 +395,7 @@ treeJSON = d3.json("flare.json", function(error, treeData) {
             // d.y = (d.depth * 500); //500px per level.
         });
 
-        // Update the nodes¡¦
+        // Update the nodesÂ¡Â¦
         node = svgGroup.selectAll("g.node")
             .data(nodes, function(d) {
                 return d.id || (d.id = ++i);
@@ -489,7 +489,7 @@ treeJSON = d3.json("flare.json", function(error, treeData) {
         nodeExit.select("text")
             .style("fill-opacity", 0);
 
-        // Update the links¡¦
+        // Update the linksÂ¡Â¦
         var link = svgGroup.selectAll("path.link")
             .data(links, function(d) {
                 return d.target.id;
