@@ -47,7 +47,7 @@ treeJSON = d3.json("flare.json", function(error, treeData) {
     var viewerWidth = $(document).width();
     var viewerHeight = $(document).height();
 
-    var tree = d3.layout.tree()
+    var tree = d3.tree()
         .size([viewerHeight, viewerWidth]);
 
     // define a d3 diagonal projection for use by the node paths later on.
@@ -395,7 +395,7 @@ treeJSON = d3.json("flare.json", function(error, treeData) {
             // d.y = (d.depth * 500); //500px per level.
         });
 
-        // Update the nodes¡¦
+        // Update the nodesÂ¡Â¦
         node = svgGroup.selectAll("g.node")
             .data(nodes, function(d) {
                 return d.id || (d.id = ++i);
@@ -489,7 +489,7 @@ treeJSON = d3.json("flare.json", function(error, treeData) {
         nodeExit.select("text")
             .style("fill-opacity", 0);
 
-        // Update the links¡¦
+        // Update the linksÂ¡Â¦
         var link = svgGroup.selectAll("path.link")
             .data(links, function(d) {
                 return d.target.id;
